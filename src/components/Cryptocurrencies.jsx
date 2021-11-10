@@ -51,4 +51,4 @@ function Cryptocurrencies({ simplified }) {
     )
 }
 
-export default Cryptocurrencies
+export default Cryptocurrencies;

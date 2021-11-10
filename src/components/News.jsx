@@ -29,7 +29,7 @@ function News({ simplified }) {
                                 className="select-news" 
                                 placeholder="Select a crypto"
                                 optionFilterProp="children" 
-                                onChange={ value => setNewsCategory(value)}
+                                onChange={ value => setNewsCategory(value) }
                                 filterOption={(input,option) => (option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0)}
                         >
                             <Option value="Cryptocurrency">Cryptocurrency</Option>
