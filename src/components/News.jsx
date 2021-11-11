@@ -16,7 +16,7 @@ function News({ simplified }) {
 
     const { data: cryptoNews, isFetching } = useGetNewsQuery({ newsCategory, count: simplified? 6 : 12});
     const { data } = useGetCryptosQuery(100);
-
+    
     if(isFetching) return 'Loading ...'
     
 
@@ -33,7 +33,7 @@ function News({ simplified }) {
                                 filterOption={(input,option) => (option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0)}
                         >
                             <Option value="Cryptocurrency">Cryptocurrency</Option>
-                            {data?.data?.coins.map((coin) => <Option value={coin.name}>{coin.name}</Option>)}
+                            {data?.data?.coins.map((coin) => <Option value={coin.name} key={coin.id}>{coin.name}</Option>)}
                         </Select>
                     </Col>
                 )}

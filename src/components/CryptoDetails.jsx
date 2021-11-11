@@ -21,7 +21,7 @@ function CryptoDetails() {
     if(isFetching) return 'Loading ...';
 
     const cryptoDetails = data?.data?.coin;
-
+    
     const time = ['3h', '24h', '7d', '30d', '1y', '3m', '3y', '5y'];
 
     // Arranging the data from the API for ease of use
@@ -118,7 +118,7 @@ function CryptoDetails() {
                         {cryptoDetails.name} Links
                     </Title>
                     {cryptoDetails.links.map( link => 
-                    <Row className="coin-link" key={link.name}>
+                    <Row className="coin-link" key={link.url}>
                         <Title level={5} className="link-name">
                             {link.type}
                         </Title>
